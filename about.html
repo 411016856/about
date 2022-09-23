@@ -4,6 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+
+	<script>
+		function change1() {
+  			document.getElementById("pic").src = "face2.jpg";
+  			document.getElementById("h2text").innerText = "靜宜資管";
+		}
+
+		function change2() {
+  			document.getElementById("pic").src = "face.jpg";
+  			document.getElementById("h2text").innerText = "HONG XIANG HUA";
+		}
+	</script>
+
 </head>
 <body>
 	<table width="70%">
@@ -12,13 +25,13 @@
 
 			<td>
 
-				<img src="face.jpg" width="50%"></img>
+				<img src="face.jpg" width="50%"id="pic" onmouseover="change1()" onmouseout="change2()"></img>
 
 			</td>
 
 			<td>
 				<h1>洪詳華</h1>
-				<h2>HONG XIANG HUA</h2>
+				<h2 id="h2text">HONG XIANG HUA</h2>
 			</td>
 		</tr>
 	</table>
@@ -32,9 +45,9 @@
 			</td>
 
 			<td>
-			大象席地而坐電影配樂<br>
+			抒情音樂<br>
 			<audio controls>
-				<source src="elephant.mp3" type="audio/mP3">
+				<source src="music.mp3" type="audio/mP3">
 			</audio><br>
 			</td>
 
@@ -47,5 +60,6 @@
 	</table>
 
 	
+<?php echo date("Y-m-d") ?>
 </body>
 </html>
